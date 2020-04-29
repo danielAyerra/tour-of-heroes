@@ -1,22 +1,45 @@
 /* Application-wide Styles */
+
+@font-face {
+  font-family: "Retro Gaming";
+  src: url("../../fonts/Retro Gaming.ttf");
+}
+
+@font-face {
+  font-family: ;
+  src: url("../../fonts/Retro Gaming.ttf");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  
+  font-family: RPGSystem;
+  
+}
+
 h1 {
   color: #369;
-  font-family: RPGSystem, sans-serif;
   font-size: 250%;
+
 }
 h2, h3 {
   color: #444;
-  font-family: RPGSystem, sans-serif;
-  font-weight: lighter;
+  
 }
+
+h4, h5, h6 {
+  font-weight: lighter;
+  color: #777;
+}
+
+#navBarTitle {
+  font-size:250%;
+  font-family: RPGSystem;
+}
+
 body {
   margin: 2em;
 }
-body, input[type="text"], button {
-  color: #333;
-  font-family: "Retro Gaming";
-}
-/* everywhere else */
+
 * {
-  font-family: "Retro Gaming", sans-serif;
+  font-family: "Retro Gaming";
 }

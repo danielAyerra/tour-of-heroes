@@ -1,19 +1,27 @@
-<h2>Meh heroes</h2>
-<div>
-  <label>Hero name:
-    <input #heroName />
-  </label>
-
-  <button (click)="add(heroName.value); heroName.value=''">
-    Añadir
-  </button>
+<div class="container">
+  <div class="row-12 justify-content-center">
+    <div class="col">
+      <h1>Meh heroes</h1>
+    </div>
+  </div>
+  <div class="row-6 justify-content-center">
+    <div class="col">
+      <label>Hero name:
+        <input #heroName />
+      </label>
+      <button (click)="add(heroName.value); heroName.value=''">
+      Añadir
+      </button>
+    </div>
+    <div class="col-lg-6 col-12">
+      <ul class="list-group">
+        <li *ngFor="let hero of heroes" class="list-group-item">
+          <a routerLink="/detail/{{hero.id}}">
+            <span class="badge badge-warning">{{hero.id}}</span> {{hero.name}}
+          </a>
+          <button class="btn btn-outline-danger btn-sm badge-pill" (click)="delete(hero)">x</button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
-<ul>
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span>{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button 
-    (click)="delete(hero)">x</button>
-  </li>
-</ul>
