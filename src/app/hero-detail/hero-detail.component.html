@@ -1,15 +1,30 @@
-<div *ngIf="hero">
-
-  <h2>{{hero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{hero.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name"/>
-    </label>
-  </div>
-
+<div *ngIf="hero" class="container">
+	<!--<div class="row-12">-->
+	<div>
+		<h2 class="text-center">{{hero.name | uppercase}} Details</h2>
+	</div>
+	<!--<div class="row-12">-->
+	<div>
+	<!--<div class="col-6"><span>id: </span>{{hero.id}}</div>-->
+		<div><span>id: </span>{{hero.id}}</div>
+  		<div>
+    		<label class="badge badge-primary">name:
+     		</label>
+     		<input class="form-control" [(ngModel)]="hero.name" placeholder="name"/>
+  		</div>
+	</div>
+	<div>
+	<!--<div class="row-12 justify-content-around">-->
+		<div>
+		<!--<div class="col-3">-->
+			<button class="btn btn-primary" (click)="save()">save</button>
+		</div>
+		<div>
+		<!--<div class="col-3">-->
+			<button class="btn btn-dark"(click)="goBack()">go back</button>
+		</div>
+	</div>
 </div>
 
-<button (click)="save()">save</button>
 
-<button (click)="goBack()">go back</button>
+

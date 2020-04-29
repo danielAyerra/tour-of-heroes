@@ -1,8 +1,8 @@
-<div *ngIf="messageService.messages.length">
-
-  <h2>Messages</h2>
-  <button class="clear"
+<div class="row justify-content-center row-cols-1 align-items-start" *ngIf="messageService.messages.length">
+	<div class="col">
+  		<h2 class="text-center">Messages</h2>
+  		<button class="btn btn-danger "
           (click)="messageService.clear()">Clear</button>
-  <div *ngFor='let message of messageService.messages'> {{message}} </div>
-
+  		<div class="row-12 row-md-8 text-center" *ngFor='let message of messageService.messages'> {{message}} </div>
+	</div>
 </div>

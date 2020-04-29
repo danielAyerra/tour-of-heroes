@@ -1,19 +1,26 @@
 <div class="container">
-  <div class="row-12 justify-content-center">
-    <div class="col">
+  <div>
+  <!--<div class="row-6 justify-content-between mg-auto">-->
+    <div><!--<div class="col-6 align-self-center">-->
       <h1>Meh heroes</h1>
     </div>
   </div>
-  <div class="row-6 justify-content-center">
-    <div class="col">
+  <div>
+  <!--<div class="row-6 justify-content-center mg-auto">-->
+    <div>
+  <!--<div class="col-6">-->
       <label>Hero name:
-        <input #heroName />
+        <input class="form-control" #heroName />
       </label>
-      <button (click)="add(heroName.value); heroName.value=''">
-      Añadir
+      <button class="btn btn-primary" (click)="add(heroName.value); heroName.value=''">
+        Añadir
       </button>
     </div>
-    <div class="col-lg-6 col-12">
+  </div>
+  <div>
+  <!--<div class="row-6 justify-content-between mg-auto">-->
+    <div>
+    <!--<div class="col-6">-->
       <ul class="list-group">
         <li *ngFor="let hero of heroes" class="list-group-item">
           <a routerLink="/detail/{{hero.id}}">
